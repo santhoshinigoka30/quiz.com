@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz application</title>
+</head>
+<body>
+Q1. 2,3,5,7,?<br>
+<input type="radio" name="question1">5<br>
+<input type="radio" name="question1">8<br>
+<input type="radio" name="question1" id="correct1">11<br>
+<input type="radio" name="question1">13<br>
+
+Q2. 2,4,6,8,?<br>
+<input type="radio" name="question2" id="correct2">10<br>
+<input type="radio" name="question2">8<br>
+<input type="radio" name="question2">11<br>
+<input type="radio" name="question2">13<br>
+
+Q3. 1,3,5,7,?<br>
+<input type="radio" name="question3">5<br>
+<input type="radio" name="question3">8<br>
+<input type="radio" name="question3">11<br>
+<input type="radio" name="question3" id="correct3">9<br>
+
+<input type="submit" name="submit" value="submitQuiz" onclick="result()">
+
+<script type="text/javascript">
+    function result(){
+        var score=0;
+        if (document.getElementById('correct1').checked)
+        {
+            score++;
+        }
+        if (document.getElementById('correct2').checked)
+        {
+            score++;
+        }
+        if (document.getElementById('correct3').checked)
+        {
+            score++;
+        }
+        document.write("Your score is:"+score);
+    }
+</script>
+</body>
+</html>
+
+
